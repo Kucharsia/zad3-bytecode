@@ -1,0 +1,140 @@
+Compiled from "BubbleSort.kt"
+public final class BubbleSortKt {
+  public static final void main();
+    descriptor: ()V
+    Code:
+       0: bipush        6
+       2: newarray       int
+       4: astore_1
+       5: aload_1
+       6: iconst_0
+       7: iconst_5
+       8: iastore
+       9: aload_1
+      10: iconst_1
+      11: iconst_3
+      12: iastore
+      13: aload_1
+      14: iconst_2
+      15: bipush        8
+      17: iastore
+      18: aload_1
+      19: iconst_3
+      20: iconst_2
+      21: iastore
+      22: aload_1
+      23: iconst_4
+      24: iconst_1
+      25: iastore
+      26: aload_1
+      27: iconst_5
+      28: iconst_4
+      29: iastore
+      30: aload_1
+      31: astore_0
+      32: aload_0
+      33: invokestatic  #10                 // Method bubbleSort:([I)V
+      36: iconst_0
+      37: istore_1
+      38: aload_0
+      39: arraylength
+      40: istore_2
+      41: iload_1
+      42: iload_2
+      43: if_icmpge     82
+      46: aload_0
+      47: iload_1
+      48: iaload
+      49: istore_3
+      50: new           #12                 // class java/lang/StringBuilder
+      53: dup
+      54: invokespecial #15                 // Method java/lang/StringBuilder."<init>":()V
+      57: iload_3
+      58: invokevirtual #19                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      61: bipush        32
+      63: invokevirtual #22                 // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+      66: invokevirtual #26                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      69: getstatic     #32                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      72: swap
+      73: invokevirtual #38                 // Method java/io/PrintStream.print:(Ljava/lang/Object;)V
+      76: iinc          1, 1
+      79: goto          41
+      82: return
+
+  public static final void bubbleSort(int[]);
+    descriptor: ([I)V
+    Code:
+       0: aload_0
+       1: ldc           #45                 // String array
+       3: invokestatic  #51                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_0
+       7: arraylength
+       8: istore_1
+       9: iconst_0
+      10: istore_2
+      11: iconst_0
+      12: istore_3
+      13: iload_1
+      14: iconst_1
+      15: isub
+      16: istore        4
+      18: iload_3
+      19: iload         4
+      21: if_icmpge     101
+      24: iconst_0
+      25: istore_2
+      26: iconst_0
+      27: istore        5
+      29: iload_1
+      30: iload_3
+      31: isub
+      32: iconst_1
+      33: isub
+      34: istore        6
+      36: iload         5
+      38: iload         6
+      40: if_icmpge     88
+      43: aload_0
+      44: iload         5
+      46: iaload
+      47: aload_0
+      48: iload         5
+      50: iconst_1
+      51: iadd
+      52: iaload
+      53: if_icmple     82
+      56: aload_0
+      57: iload         5
+      59: iaload
+      60: istore        7
+      62: aload_0
+      63: iload         5
+      65: aload_0
+      66: iload         5
+      68: iconst_1
+      69: iadd
+      70: iaload
+      71: iastore
+      72: aload_0
+      73: iload         5
+      75: iconst_1
+      76: iadd
+      77: iload         7
+      79: iastore
+      80: iconst_1
+      81: istore_2
+      82: iinc          5, 1
+      85: goto          36
+      88: iload_2
+      89: ifne          95
+      92: goto          101
+      95: iinc          3, 1
+      98: goto          18
+     101: return
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    Code:
+       0: invokestatic  #60                 // Method main:()V
+       3: return
+}
